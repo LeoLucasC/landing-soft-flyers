@@ -6,6 +6,8 @@ import imgEmapa from '../assets/images/marcas_clientes/emapa.jpeg';
 import imgIceCrazy from '../assets/images/marcas_clientes/iceCrazy.jpg.jpeg';
 import imgOe from '../assets/images/marcas_clientes/oe.png';
 import imgSarcos from '../assets/images/marcas_clientes/sarcos.jpg.jpeg';
+import BrandFeature from './BrandFeature';
+import FeatureVideo from './FeatureVideo';
 
 // --- COMPONENTE DE LA PÁGINA PRINCIPAL ---
 const LandingPage = () => {
@@ -71,6 +73,12 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* SECCIÓN SOBRE LA MARCA (TEMA PRINCIPAL) */}
+            <BrandFeature />
+
+            {/* SECCIÓN DE VIDEO EMOCIONAL / FUNCIONALIDAD */}
+            <FeatureVideo />
 
             {/* 2. NUEVA SECCIÓN: GALERÍA DE LA APP (IMPACTANTE) */}
             <section className="py-16 bg-white" id="soluciones">
