@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 
         {/* Columna 2: Mapa del sitio */}
         <div>
-          <h3 className="font-bold text-xl mb-4 border-b-2 border-blue-900 w-fit">Mapa del sitio</h3>
+          <h3 className="font-bold text-xl mb-4 border-b-2 border-blue-900 w-fit">Mapa del softflyer</h3>
           <ul className="space-y-2">
             <li><a href="/" className="hover:text-cyan-500">Inicio</a></li>
             <li><a href="/okvet" className="hover:text-cyan-500">OkVet</a></li>
