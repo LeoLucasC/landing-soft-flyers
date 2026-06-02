@@ -10,7 +10,7 @@ import BrandFeature from './BrandFeature';
 import FeatureVideo from './FeatureVideo';
 import FeatureCotizacion from './FeatureCotizacion';
 import { Quote, Star } from 'lucide-react';
-import PrediccionVentas from './PrediccionVentas';
+
 
 // --- COMPONENTE DE LA PÁGINA PRINCIPAL ---
 const LandingPage = () => {

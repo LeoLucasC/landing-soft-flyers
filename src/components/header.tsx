@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import logoImg from '../assets/images/SUNATALIANSA.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 
 
  const Header: React.FC = () => {
-  const [, setIsScrolled] = useState(false);
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // <-- AGREGAR ESTAS DOS LÍNEAS
