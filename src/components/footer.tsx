@@ -1,66 +1,118 @@
 import React from 'react';
 
+import { MessageCircle, MapPin, Mail } from 'lucide-react'; 
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-white border-t border-cyan-400 pt-10 pb-6 px-4 md:px-20 font-sans text-blue-900">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="relative w-full bg-slate-50 border-t border-cyan-100 pt-16 pb-8 overflow-hidden font-sans text-slate-700">
+      
+      {/* Elementos decorativos de fondo (colores de la marca) */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-cyan-400 to-blue-500"></div>
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-cyan-100/50 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-10 -right-24 w-80 h-80 bg-blue-100/40 rounded-full blur-[80px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
         
-        {/* Columna 1: Logo */}
-        <div className="flex justify-center md:justify-start">
-          <img src="src/img/logo.png" alt="OkVet Logo" className="h-40" />
-        </div>
-
-        {/* Columna 2: Mapa del sitio */}
-        <div>
-          <h3 className="font-bold text-xl mb-4 border-b-2 border-blue-900 w-fit">Mapa del softflyer</h3>
-          <ul className="space-y-2">
-            <li><a href="/" className="hover:text-cyan-500">Inicio</a></li>
-            <li><a href="/okvet" className="hover:text-cyan-500">OkVet</a></li>
-            <li><a href="/funcionalidades" className="hover:text-cyan-500">Funcionalidades</a></li>
-            <li><a href="/okvet-pro" className="hover:text-cyan-500">OkVet Pro</a></li>
-            <li><a href="/novedades" className="hover:text-cyan-500">Novedades</a></li>
-            <li><a href="/contacto" className="hover:text-cyan-500">Contacto</a></li>
-          </ul>
-        </div>
-
-        {/* Columna 3: OkVet Pro */}
-        <div>
-          <div className="bg-black text-white px-4 py-1 rounded-full w-fit mb-4 font-bold italic">
-            OkVet <span className="text-cyan-400">Pro</span>
+        {/* Columna 1: Branding y Descripción (Ocupa más espacio) */}
+        <div className="md:col-span-4 flex flex-col justify-start">
+          <div className="flex items-center gap-2 mb-6">
+             <img src="/img/logo.png" alt="Softlyer Logo" className="w-10 h-10 rounded-lg" />
+            <span className="text-2xl font-black text-slate-800 tracking-tight">Softlyer</span>
           </div>
-          <ul className="space-y-2">
-            <li>Facturación electrónica</li>
-            <li>Ventas e inventario</li>
-            <li>Hospitalización y ambulatorios</li>
-            <li>Marketing</li>
-            <li>Informes especializados</li>
-            <li>Rompe tus límites</li>
+          <p className="text-slate-500 leading-relaxed mb-6">
+            Transformamos negocios tradicionales brindándoles una presencia profesional en Internet. Páginas web modernas, rápidas y listas para captar clientes en todo el Perú.
+          </p>
+          <div className="flex flex-col gap-3 text-sm text-slate-600">
+             <div className="flex items-center gap-3">
+                <MapPin size={18} className="text-cyan-500" />
+                <span>Atención 100% Remota a nivel nacional</span>
+             </div>
+             <div className="flex items-center gap-3">
+                <Mail size={18} className="text-blue-500" />
+                <span>contacto@softlyer.com</span>
+             </div>
+          </div>
+        </div>
+
+        {/* Columna 2: Servicios Principales */}
+        <div className="md:col-span-3 lg:col-span-2">
+          <h3 className="font-bold text-lg text-slate-800 mb-6 flex items-center">
+            <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+            Nuestros Servicios
+          </h3>
+          <ul className="space-y-3">
+            <li><a href="#landing-pages" className="hover:text-cyan-600 transition-colors duration-200">Landing Pages</a></li>
+            <li><a href="#appwebs" className="hover:text-cyan-600 transition-colors duration-200">AppWebs (Sistemas)</a></li>
+            <li><a href="#planes" className="hover:text-cyan-600 transition-colors duration-200">Precios y Planes</a></li>
+            <li><a href="#portafolio" className="hover:text-cyan-600 transition-colors duration-200">Portafolio</a></li>
           </ul>
         </div>
 
-        {/* Columna 4: Redes Sociales */}
-        <div className="flex flex-col items-center md:items-end">
-          <h3 className="font-bold text-xl mb-4">Síguenos</h3>
-          <div className="flex gap-3">
-            {/* Iconos simulados con círculos negros (puedes usar react-icons) */}
-            <div className="bg-black text-white p-2 rounded-lg cursor-pointer">FB</div>
-            <div className="bg-black text-white p-2 rounded-lg cursor-pointer">IG</div>
-            <div className="bg-black text-white p-2 rounded-lg cursor-pointer">YT</div>
-            <div className="bg-black text-white p-2 rounded-lg cursor-pointer">TK</div>
+        {/* Columna 3: Planes Destacados */}
+        <div className="md:col-span-3 lg:col-span-3">
+          <h3 className="font-bold text-lg text-slate-800 mb-6 flex items-center">
+            <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+            Planes Web
+          </h3>
+          <ul className="space-y-4">
+            <li>
+                <div className="group cursor-pointer">
+                    <p className="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">Plan Emprendedor</p>
+                    <p className="text-xs text-slate-500">Ideal para empezar con dominio y hosting.</p>
+                </div>
+            </li>
+            <li>
+                <div className="group cursor-pointer">
+                    <p className="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">Plan Negocio <span className="bg-yellow-100 text-yellow-700 text-[10px] px-2 py-0.5 rounded-full ml-1 font-bold">POPULAR</span></p>
+                    <p className="text-xs text-slate-500">Galería, mapa y correos corporativos.</p>
+                </div>
+            </li>
+            <li>
+                <div className="group cursor-pointer">
+                    <p className="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">Plan Profesional</p>
+                    <p className="text-xs text-slate-500">Con Meta Pixel, Analytics y SEO.</p>
+                </div>
+            </li>
+          </ul>
+        </div>
+
+        {/* Columna 4: CTA y Redes Sociales */}
+        <div className="md:col-span-2 lg:col-span-3 flex flex-col md:items-end">
+          <h3 className="font-bold text-lg text-slate-800 mb-6 flex items-center md:justify-end w-full">
+            <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 md:hidden"></span>
+            Conecta con nosotros
+          </h3>
+          
+          {/* Botón WhatsApp Destacado en Footer */}
+          <a href="https://wa.me/tunumerodecontacto" target="_blank" rel="noreferrer" 
+             className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-6 rounded-xl flex items-center justify-center gap-2 mb-6 transition-all shadow-lg shadow-green-500/30 hover:-translate-y-1">
+            <MessageCircle size={20} />
+            Cotizar ahora
+          </a>
+
+          <div className="flex gap-3 justify-center md:justify-end w-full">
+            <a href="#" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-600 hover:shadow-md transition-all">
+              <FaFacebook size={18} />
+            </a>
+            <a href="#" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-pink-600 hover:border-pink-600 hover:shadow-md transition-all">
+              <FaInstagram size={18} />
+            </a>
+            <a href="#" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-blue-700 hover:border-blue-700 hover:shadow-md transition-all">
+              <FaLinkedin size={18} />
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Línea inferior: Apps y Copyright */}
-      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="flex gap-4">
-          <img src="/app-store-badge.png" alt="App Store" className="h-10" />
-          <img src="/google-play-badge.png" alt="Google Play" className="h-10" />
+      {/* Línea inferior: Copyright y Legales */}
+      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-200 px-6 md:px-12 flex flex-col-reverse md:flex-row justify-between items-center gap-4">
+        <div className="text-sm text-slate-500 font-medium">
+          © {new Date().getFullYear()} Softlyer. Todos los derechos reservados.
         </div>
-        <div className="flex gap-6 text-sm text-gray-600">
-          <a href="/privacidad" className="hover:underline">Política de privacidad</a>
-          <a href="/soporte" className="hover:underline">Soporte</a>
-          <span>- OkVet Todos los derechos Reservados © 2024</span>
+        <div className="flex gap-6 text-sm font-medium">
+          <a href="/privacidad" className="text-slate-500 hover:text-blue-600 transition-colors">Privacidad</a>
+          <a href="/terminos" className="text-slate-500 hover:text-blue-600 transition-colors">Términos del Servicio</a>
         </div>
       </div>
     </footer>

@@ -98,18 +98,18 @@ const FeatureVideo: React.FC = () => {
                     </div>
 
                     {/* Secondary Video Container (Mobile/POS View) - Positioning overlays and pops out */}
-                    <div className="absolute -bottom-10 right-4 sm:right-10 lg:right-0 lg:bottom-1/2 lg:translate-y-1/2 w-[160px] sm:w-[220px] lg:w-[280px] aspect-[9/19] bg-white rounded-[2rem] sm:rounded-[2.5rem] p-2 border border-slate-200 shadow-[0_30px_60px_0px_rgba(0,0,0,0.15),0_0_0_1px_rgba(0,0,0,0.05)] z-20 group hover:-translate-y-4 hover:-rotate-2 transition-all duration-700 ease-out rotate-3">
+                    <div className="absolute -bottom-10 right-4 sm:right-10 lg:right-0 lg:bottom-1/2 lg:translate-y-1/2 w-[160px] sm:w-[220px] lg:w-[280px] aspect-[9/19] bg-white rounded-[2rem] sm:rounded-[2.5rem] p-2 border border-slate-200 shadow-[0_30px_60px_0px_rgba(0,0,0,0.15),0_0_0_1px_rgba(0,0,0,0.05)] z-20 group rotate-1">
                         {/* Soft ambient glow behind phone */}
                         <div className="absolute -inset-10 bg-cyan-400/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition duration-700 -z-10"></div>
 
-                        <div className="relative w-full h-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-slate-900 shadow-inner">
+                        <div className="relative w-full h-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-white shadow-inner">
                             {/* Mobile notch dummy */}
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-5 bg-white rounded-b-xl z-20"></div>
 
                             <video
                                 ref={videoRefMobile}
                                 src={videoMobile}
-                                className="w-full h-full object-cover scale-105"
+                                className="w-full h-full object-contain"
                                 autoPlay
                                 loop
                                 muted
@@ -132,20 +132,46 @@ const FeatureVideo: React.FC = () => {
                 </div>
 
                 {/* Feature highlights below video (Clean white theme) */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 mt-20 max-w-4xl mx-auto md:border md:border-slate-100 md:bg-white md:shadow-lg md:shadow-slate-200/50 md:rounded-3xl overflow-hidden p-6 md:p-0">
-                    <div className="text-center px-4 md:py-8 bg-white md:bg-transparent rounded-2xl shadow-sm border border-slate-100 md:border-0 md:shadow-none p-6 md:p-0">
-                        <div className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-blue-600 font-black text-4xl mb-2">100%</div>
-                        <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Flujo Automatizado</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 max-w-4xl mx-auto">
+                {/* Card 1 */}
+                <div className="relative group flex flex-col items-center text-center p-8 bg-white rounded-3xl border border-slate-100 shadow-md shadow-slate-200/60 hover:shadow-xl hover:shadow-blue-100/60 hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/80 to-blue-50/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                    <div className="relative z-10 w-14 h-14 mb-5 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/30">
+                        <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
                     </div>
-                    <div className="text-center px-4 md:py-8 border-y md:border-y-0 md:border-x border-slate-100 py-6 md:p-0 bg-white md:bg-transparent rounded-2xl shadow-sm md:shadow-none md:rounded-none">
-                        <div className="text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-indigo-600 font-black text-4xl mb-2">24/7</div>
-                        <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Disponibilidad Total</p>
-                    </div>
-                    <div className="text-center px-4 md:py-8 bg-white md:bg-transparent rounded-2xl shadow-sm border border-slate-100 md:border-0 md:shadow-none p-6 md:p-0">
-                        <div className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 to-purple-600 font-black text-4xl mb-2">0</div>
-                        <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Fricciones Operativas</p>
-                    </div>
+                    <div className="relative z-10 text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-blue-600 font-black text-5xl mb-2 leading-none">100%</div>
+                    <p className="relative z-10 text-slate-700 font-bold text-sm uppercase tracking-widest mt-1">Flujo Automatizado</p>
+                    <p className="relative z-10 text-slate-400 text-xs mt-2 leading-relaxed">Procesos sin intervención manual</p>
                 </div>
+
+                {/* Card 2 */}
+                <div className="relative group flex flex-col items-center text-center p-8 bg-white rounded-3xl border border-slate-100 shadow-md shadow-slate-200/60 hover:shadow-xl hover:shadow-blue-100/60 hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 to-indigo-50/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                    <div className="relative z-10 w-14 h-14 mb-5 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div className="relative z-10 text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-indigo-600 font-black text-5xl mb-2 leading-none">24/7</div>
+                    <p className="relative z-10 text-slate-700 font-bold text-sm uppercase tracking-widest mt-1">Disponibilidad Total</p>
+                    <p className="relative z-10 text-slate-400 text-xs mt-2 leading-relaxed">Siempre activo, sin interrupciones</p>
+                </div>
+
+                {/* Card 3 */}
+                <div className="relative group flex flex-col items-center text-center p-8 bg-white rounded-3xl border border-slate-100 shadow-md shadow-slate-200/60 hover:shadow-xl hover:shadow-indigo-100/60 hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/80 to-purple-50/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                    <div className="relative z-10 w-14 h-14 mb-5 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                        <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div className="relative z-10 text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 to-purple-600 font-black text-5xl mb-2 leading-none">0</div>
+                    <p className="relative z-10 text-slate-700 font-bold text-sm uppercase tracking-widest mt-1">Fricciones Operativas</p>
+                    <p className="relative z-10 text-slate-400 text-xs mt-2 leading-relaxed">Experiencia fluida de principio a fin</p>
+                </div>
+            </div>
             </div>
         </section>
     );
