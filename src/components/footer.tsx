@@ -69,10 +69,7 @@ const Footer: React.FC = () => {
                 </div>
             </li>
             <li>
-                <div className="group cursor-pointer">
-                    <p className="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">Plan Profesional</p>
-                    <p className="text-xs text-slate-500">Con Meta Pixel, Analytics y SEO.</p>
-                </div>
+                
             </li>
           </ul>
         </div>

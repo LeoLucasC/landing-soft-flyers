@@ -82,9 +82,11 @@ import { useNavigate, useLocation } from 'react-router-dom';
                 </div>
 
                 {/* Item 2 */}
-                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => { setIsMenuOpen(false); navigate('/prediccion-ventas'); }}>
+                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => { setIsMenuOpen(false); navigate('/estudio-mercado'); }}>
                   <div className="w-10 h-10 flex items-center justify-center text-cyan-500 group-hover/item:scale-110 transition-transform">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
                   </div>
                   <div>
                     <h4 className="text-slate-800 font-bold text-lg mb-1 group-hover/item:text-cyan-600 transition-colors">Estudio de Mercado IA</h4>
@@ -216,7 +218,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
               <svg className="w-5 h-5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
               Predicción de Ventas
             </a>
-            <a href="#soluciones" onClick={(e) => { e.preventDefault(); scrollTo('soluciones'); }} className="text-slate-700 font-bold flex items-center gap-3">
+            <a href="/estudio-mercado" onClick={() => { setIsMenuOpen(false); navigate('/estudio-mercado'); }} className="text-slate-700 font-bold flex items-center gap-3">
               <svg className="w-5 h-5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
               Estudio de Mercado IA
             </a>

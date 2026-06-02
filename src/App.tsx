@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import LandingPage from "./components/body";
-import PrediccionVentas from "./components/PrediccionVentas"; // Asegúrate de que la ruta sea correcta
+import PrediccionVentas from "./components/PrediccionVentas";
+import EstudioMercado from "./components/EstudioMercado"; 
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             
             {/* Ruta nueva: Muestra solo la página de IA */}
             <Route path="/prediccion-ventas" element={<PrediccionVentas />} />
+            <Route path="/estudio-mercado" element={<EstudioMercado />} />
           </Routes>
         </main>
 
