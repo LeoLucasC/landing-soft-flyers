@@ -1,21 +1,29 @@
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import LandingPage from "./components/body";
+import PrediccionVentas from "./components/PrediccionVentas"; // Asegúrate de que la ruta sea correcta
 
-// --- COMPONENTE PRINCIPAL ---
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Header />
 
-      {/* MARGEN SUPERIOR CRÍTICO: Asegura que el Header no tape el contenido */}
-      <main className="flex-grow">
-        <LandingPage />
-      </main>
+        {/* MARGEN SUPERIOR CRÍTICO */}
+        <main className="flex-grow">
+          <Routes>
+            {/* Ruta principal: Muestra el body.tsx */}
+            <Route path="/" element={<LandingPage />} />
+            
+            {/* Ruta nueva: Muestra solo la página de IA */}
+            <Route path="/prediccion-ventas" element={<PrediccionVentas />} />
+          </Routes>
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

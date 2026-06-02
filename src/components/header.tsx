@@ -1,28 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import logoImg from '../assets/images/SUNATALIANSA.png';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-const Header: React.FC = () => {
+
+
+ const Header: React.FC = () => {
   const [, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // <-- AGREGAR ESTAS DOS LÍNEAS
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // Efecto para cambiar el estilo al hacer scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
+  // <-- REEMPLAZAR TU SCROLLTO POR ESTE:
   const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY - 100; // offset por el header (100px aprox)
-      window.scrollTo({ top, behavior: 'smooth' });
-      setIsMenuOpen(false);
-    } else if (id === 'top') {
+    setIsMenuOpen(false);
+
+    // Si NO estamos en el inicio y quieren ir a una sección del inicio (ej. "planes" o "soluciones")
+    if (location.pathname !== '/' && id !== 'top') {
+      navigate('/'); // Vamos al inicio primero
+      setTimeout(() => { // Esperamos un milisegundo a que cargue la página y hacemos scroll
+        const element = document.getElementById(id);
+        if (element) {
+          const top = element.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }, 150);
+      return;
+    }
+
+    // Lógica normal si ya estamos en el inicio
+    if (id === 'top') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      setIsMenuOpen(false);
+      if (location.pathname !== '/') navigate('/'); // Ir a inicio si hacen click en el logo
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        const top = element.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
     }
   };
 
@@ -54,7 +71,7 @@ const Header: React.FC = () => {
               {/* Mega Menu Modal */}
               <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-[800px] bg-white border-2 border-cyan-400 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8 grid grid-cols-2 gap-8">
                 {/* Item 1 */}
-                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => scrollTo('soluciones')}>
+                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => { setIsMenuOpen(false); navigate('/prediccion-ventas'); }}>
                   <div className="w-10 h-10 flex items-center justify-center text-cyan-500 group-hover/item:scale-110 transition-transform">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                   </div>
@@ -65,7 +82,7 @@ const Header: React.FC = () => {
                 </div>
 
                 {/* Item 2 */}
-                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => scrollTo('soluciones')}>
+                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => { setIsMenuOpen(false); navigate('/prediccion-ventas'); }}>
                   <div className="w-10 h-10 flex items-center justify-center text-cyan-500 group-hover/item:scale-110 transition-transform">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                   </div>
@@ -78,7 +95,7 @@ const Header: React.FC = () => {
                 {/* Pie del Menu */}
                 <div className="col-span-2 flex justify-between items-center border-t border-slate-100 pt-6 mt-2">
                   <a href="#soluciones" onClick={(e) => { e.preventDefault(); scrollTo('soluciones'); }} className="text-cyan-500 font-bold hover:underline underline-offset-4">Ver todos los casos de estudio</a>
-                  <button className="bg-slate-900 text-white px-6 py-2 rounded-xl font-bold hover:bg-cyan-500 transition-colors" onClick={() => scrollTo('soluciones')}>
+                  <button className="bg-slate-900 text-white px-6 py-2 rounded-xl font-bold hover:bg-cyan-500 transition-colors" onClick={() => { setIsMenuOpen(false); navigate('/prediccion-ventas'); }}>
                     Ver Módulos <span className="text-cyan-400 italic">IA</span>
                   </button>
                 </div>
@@ -195,7 +212,7 @@ const Header: React.FC = () => {
 
           <div className="flex flex-col gap-3 mt-1 pl-4 border-l-2 border-slate-100">
             <h4 className="text-slate-400 text-sm font-bold uppercase tracking-wider mb-1">Soluciones IA</h4>
-            <a href="#soluciones" onClick={(e) => { e.preventDefault(); scrollTo('soluciones'); }} className="text-slate-700 font-bold flex items-center gap-3">
+            <a href="/prediccion-ventas" onClick={(e) => { e.preventDefault(); setIsMenuOpen(false); navigate('/prediccion-ventas'); }} className="text-slate-700 font-bold flex items-center gap-3">
               <svg className="w-5 h-5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
               Predicción de Ventas
             </a>

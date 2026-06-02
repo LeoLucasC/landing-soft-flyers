@@ -2,6 +2,7 @@ import React from 'react';
 
 import { MessageCircle, MapPin, Mail } from 'lucide-react'; 
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import logoImg from '../assets/images/logo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -17,11 +18,10 @@ const Footer: React.FC = () => {
         {/* Columna 1: Branding y Descripción (Ocupa más espacio) */}
         <div className="md:col-span-4 flex flex-col justify-start">
           <div className="flex items-center gap-2 mb-6">
-             <img src="/img/logo.png" alt="Softlyer Logo" className="w-10 h-10 rounded-lg" />
-            <span className="text-2xl font-black text-slate-800 tracking-tight">Softlyer</span>
+             <img src={logoImg} alt="Softlyer Logo" className="h-14 w-auto object-contain rounded-lg" />
           </div>
           <p className="text-slate-500 leading-relaxed mb-6">
-            Transformamos negocios tradicionales brindándoles una presencia profesional en Internet. Páginas web modernas, rápidas y listas para captar clientes en todo el Perú.
+            Transformamos negocios tradicionales y modernos, ofreciéndoles una presencia profesional en Internet. Creamos páginas web modernas, rápidas y optimizadas para captar clientes en todo el Perú, adaptadas a todo tipo de negocio —incluyendo empresas industriales— y a sus necesidades específicas.
           </p>
           <div className="flex flex-col gap-3 text-sm text-slate-600">
              <div className="flex items-center gap-3">
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
              </div>
              <div className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-500" />
-                <span>contacto@softlyer.com</span>
+                <span>contactos@softlyer.com</span>
              </div>
           </div>
         </div>
@@ -85,20 +85,20 @@ const Footer: React.FC = () => {
           </h3>
           
           {/* Botón WhatsApp Destacado en Footer */}
-          <a href="https://wa.me/tunumerodecontacto" target="_blank" rel="noreferrer" 
+          <a href="https://wa.me/925725091" target="_blank" rel="noreferrer" 
              className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-6 rounded-xl flex items-center justify-center gap-2 mb-6 transition-all shadow-lg shadow-green-500/30 hover:-translate-y-1">
             <MessageCircle size={20} />
             Cotizar ahora
           </a>
 
           <div className="flex gap-3 justify-center md:justify-end w-full">
-            <a href="#" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-600 hover:shadow-md transition-all">
+            <a href="https://www.facebook.com/profile.php?id=61576762857702" target="_blank" rel="noreferrer" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-600 hover:shadow-md transition-all">
               <FaFacebook size={18} />
             </a>
-            <a href="#" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-pink-600 hover:border-pink-600 hover:shadow-md transition-all">
+            <a href="https://www.instagram.com/softflyer_" target="_blank" rel="noreferrer" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-pink-600 hover:border-pink-600 hover:shadow-md transition-all">
               <FaInstagram size={18} />
             </a>
-            <a href="#" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-blue-700 hover:border-blue-700 hover:shadow-md transition-all">
+            <a href="https://www.linkedin.com/company/softlyer" target="_blank" rel="noreferrer" className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-blue-700 hover:border-blue-700 hover:shadow-md transition-all">
               <FaLinkedin size={18} />
             </a>
           </div>
