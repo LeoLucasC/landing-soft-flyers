@@ -1,5 +1,6 @@
 import React from 'react';
 import imgLeo from '../assets/images/img_leo.png';
+import { motion } from 'framer-motion';
 
 const BrandFeature: React.FC = () => {
     return (
@@ -10,7 +11,13 @@ const BrandFeature: React.FC = () => {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                 {/* Left Content */}
-                <div className="flex-1 text-center lg:text-left selection:bg-cyan-100">
+                <motion.div 
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="flex-1 text-center lg:text-left selection:bg-cyan-100"
+                >
                     <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-cyan-100 bg-cyan-50 mb-8">
                         <span className="w-2.5 h-2.5 rounded-full bg-cyan-500 animate-pulse"></span>
                         <span className="text-cyan-700 text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase">Ecosistema Integrado</span>
@@ -115,10 +122,16 @@ const BrandFeature: React.FC = () => {
                         </div>
 
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Image/Visual */}
-                <div className="flex-1 w-full flex justify-center lg:justify-end mt-12 lg:mt-0 relative">
+                <motion.div 
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                    className="flex-1 w-full flex justify-center lg:justify-end mt-12 lg:mt-0 relative"
+                >
                     {/* Decorative background shape */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-cyan-100 to-blue-50 rounded-[3rem] rotate-3 scale-105 -z-10 transition-transform duration-700"></div>
 
@@ -133,7 +146,13 @@ const BrandFeature: React.FC = () => {
                             />
 
                             {/* Floating Glassmorphism Badge */}
-                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-[-20px] md:translate-x-0 bg-white/95 backdrop-blur-xl border border-white p-4 sm:p-5 rounded-3xl z-20 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] w-[280px]">
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+                                className="absolute bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-[-20px] md:translate-x-0 bg-white/95 backdrop-blur-xl border border-white p-4 sm:p-5 rounded-3xl z-20 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] w-[280px]"
+                            >
                                 <div className="flex items-center gap-4">
                                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
                                         <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
@@ -146,10 +165,10 @@ const BrandFeature: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

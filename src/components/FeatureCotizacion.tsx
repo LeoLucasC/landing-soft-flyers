@@ -52,9 +52,9 @@ const FeatureCotizacion: React.FC = () => {
                             ))}
                         </div>
                         
-                        <a href="https://wa.me/tunumerodecontacto" target="_blank" rel="noreferrer" 
-                           className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-cyan-500/30 text-[15px] w-full sm:w-auto">
-                            <FaWhatsapp className="w-5 h-5" />
+                        <a href="https://wa.me/925725091?text=Hola,%20quiero%20cotizar%20un%20Sistema%20Web%20a%20medida" target="_blank" rel="noreferrer" 
+                           className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-cyan-500/30 text-[15px] w-full sm:w-auto active:scale-95">
+                            <FaWhatsapp className="w-5 h-5 text-white" />
                             Cotizar mi Sistema Web
                         </a>
                     </div>
@@ -96,10 +96,11 @@ const FeatureCotizacion: React.FC = () => {
                             ))}
                         </div>
                         
-                        <a href="https://wa.me/tunumerodecontacto" target="_blank" rel="noreferrer"
-                           className="inline-flex items-center justify-center gap-2 w-full bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 text-[15px] shadow-lg shadow-slate-900/20">
+                        <a href="https://wa.me/925725091?text=Hola,%20quiero%20consultar%20sobre%20Dashboards%20e%20IA" target="_blank" rel="noreferrer"
+                           className="inline-flex items-center justify-center gap-2.5 w-full bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 text-[15px] shadow-lg shadow-slate-900/20 active:scale-95">
+                            <FaWhatsapp className="w-5 h-5 text-white" />
                             Consultar sobre Dashboards
-                            <ArrowRight className="w-4 h-4" />
+                            <ArrowRight className="w-4 h-4 text-white/80" />
                         </a>
                     </div>
                 </div>

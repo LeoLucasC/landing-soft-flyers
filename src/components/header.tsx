@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import logoImg from '../assets/images/SUNATALIANSA.png';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 
 
- const Header: React.FC = () => {
-  
+const Header: React.FC = () => {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   // <-- AGREGAR ESTAS DOS LÍNEAS
   const navigate = useNavigate();
   const location = useLocation();
+
+  const isHomeActive = location.pathname === '/';
+  const isPlanesActive = location.pathname === '/planes';
 
 
   // <-- REEMPLAZAR TU SCROLLTO POR ESTE:
@@ -55,7 +58,14 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
           {/* NAVIGATION DESKTOP */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[15px] font-semibold text-slate-700">
-            <a href="#inicio" onClick={(e) => { e.preventDefault(); scrollTo('inicio'); }} className="text-cyan-500 relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-cyan-500 after:bottom-[-4px] after:left-0 transition-colors">
+            <a
+              href="#inicio"
+              onClick={(e) => { e.preventDefault(); scrollTo('inicio'); }}
+              className={`transition-colors relative ${isHomeActive
+                  ? "text-cyan-500 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-cyan-500 after:bottom-[-4px] after:left-0"
+                  : "text-slate-700 hover:text-cyan-500"
+                }`}
+            >
               Inicio
             </a>
 
@@ -161,23 +171,35 @@ import { useNavigate, useLocation } from 'react-router-dom';
               </div>
             </div>
 
-            {/* FACTURACION CON BADGE NUVEDAD*/}
-            <div className="relative group cursor-pointer" onClick={() => scrollTo('soluciones')}>
+            {/* FACTURACION CON BADGE NOVEDAD*/}
+            <a
+              href="#soluciones-rubros"
+              onClick={(e) => { e.preventDefault(); scrollTo('soluciones-rubros'); }}
+              className="relative group cursor-pointer block"
+            >
               <span className="absolute -top-[2px] -right-2 bg-blue-600 text-[9px] text-white px-2 py-0.5 rounded-full font-black animate-pulse z-10">
                 TOP
               </span>
               <div className="flex items-center gap-2 py-4">
-                <div className="p-1.5 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 </div>
                 <div className="flex flex-col leading-none">
-                  <span className="text-slate-800 font-bold text-sm">Facturación</span>
+                  <span className="font-bold text-sm text-slate-800 group-hover:text-blue-600 transition-colors">Facturación</span>
                   <span className="text-blue-600 font-bold text-sm">Electrónica</span>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <a href="#soluciones" onClick={(e) => { e.preventDefault(); scrollTo('soluciones'); }} className="hover:text-cyan-500 transition-colors whitespace-nowrap">Estudios Ventas</a>
+            <Link
+              to="/planes"
+              className={`transition-colors whitespace-nowrap font-semibold relative ${isPlanesActive
+                  ? "text-cyan-500 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-cyan-500 after:bottom-[-4px] after:left-0"
+                  : "text-slate-700 hover:text-cyan-500"
+                }`}
+            >
+              Planes
+            </Link>
           </nav>
         </div>
 
@@ -208,8 +230,18 @@ import { useNavigate, useLocation } from 'react-router-dom';
       {/* MOBILE MENU */}
       {isMenuOpen && (
         <div className="lg:hidden absolute top-[100%] left-0 w-full bg-white border-b border-t border-slate-100 px-6 py-6 flex flex-col gap-5 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1)] z-40 max-h-[80vh] overflow-y-auto">
-          <a href="#inicio" onClick={(e) => { e.preventDefault(); scrollTo('inicio'); }} className="text-cyan-500 font-black text-lg flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-cyan-500 inline-block"></span> Inicio
+          <a
+            href="#inicio"
+            onClick={(e) => { e.preventDefault(); scrollTo('inicio'); }}
+            className={`font-black text-lg flex items-center gap-2 transition-colors ${isHomeActive ? "text-cyan-500" : "text-slate-800 hover:text-cyan-500"
+              }`}
+          >
+            {isHomeActive ? (
+              <span className="w-2 h-2 rounded-full bg-cyan-500 inline-block"></span>
+            ) : (
+              <span className="w-2 h-2 rounded-full bg-slate-300 inline-block"></span>
+            )}
+            Inicio
           </a>
 
           <div className="flex flex-col gap-3 mt-1 pl-4 border-l-2 border-slate-100">
@@ -236,9 +268,29 @@ import { useNavigate, useLocation } from 'react-router-dom';
             </a>
           </div>
 
-          <a href="#soluciones" onClick={(e) => { e.preventDefault(); scrollTo('soluciones'); }} className="text-slate-800 font-bold text-lg flex items-center gap-2 mt-2">
-            <span className="w-2 h-2 rounded-full bg-blue-600 inline-block animate-pulse"></span> Facturación Electrónica <span className="bg-blue-600 text-white text-[10px] px-2 py-0.5 rounded-full ml-1">TOP</span>
+          <a
+            href="#soluciones-rubros"
+            onClick={(e) => { e.preventDefault(); scrollTo('soluciones-rubros'); }}
+            className="text-slate-800 hover:text-cyan-500 font-bold text-lg flex items-center gap-2 mt-2 transition-colors"
+          >
+            <span className="w-2 h-2 rounded-full bg-blue-600/50 inline-block animate-pulse"></span>
+            Facturación Electrónica
+            <span className="bg-blue-600 text-white text-[10px] px-2 py-0.5 rounded-full ml-1">TOP</span>
           </a>
+
+          <Link
+            to="/planes"
+            onClick={() => setIsMenuOpen(false)}
+            className={`font-bold text-lg flex items-center gap-2 mt-2 transition-colors ${isPlanesActive ? "text-cyan-500" : "text-slate-800 hover:text-cyan-500"
+              }`}
+          >
+            {isPlanesActive ? (
+              <span className="w-2 h-2 rounded-full bg-cyan-500 inline-block"></span>
+            ) : (
+              <span className="w-2 h-2 rounded-full bg-slate-300 inline-block"></span>
+            )}
+            Planes
+          </Link>
 
           <hr className="border-slate-100 my-2" />
           <button className="w-full text-center py-4 border-2 border-cyan-400 text-slate-800 rounded-full font-bold text-lg">Acceso a Clientes</button>

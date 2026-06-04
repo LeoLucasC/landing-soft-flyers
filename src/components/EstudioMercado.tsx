@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Radar, MessageSquare, Users, FileText, Video, ArrowRight, Star, TrendingUp, Zap, Shield, BarChart3 } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const EstudioMercado: React.FC = () => {
     const ventajas = [
@@ -216,11 +217,12 @@ const EstudioMercado: React.FC = () => {
                         {/* CTA */}
                         <div className="text-center">
                             <a 
-                                href="https://wa.me/925725091" 
+                                href="https://wa.me/925725091?text=Hola,%20quiero%20solicitar%20un%20Estudio%20de%20Mercado%20con%20IA" 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="group inline-flex items-center gap-3 bg-white text-slate-800 px-10 py-5 rounded-2xl font-black text-lg hover:bg-slate-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105 duration-300"
+                                className="group inline-flex items-center justify-center gap-3 bg-white text-slate-800 px-10 py-5 rounded-2xl font-black text-lg hover:bg-slate-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 duration-300"
                             >
+                                <FaWhatsapp className="w-6 h-6 text-[#25D366]" />
                                 Quiero mi Estudio de Mercado
                                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                             </a>

@@ -3,11 +3,14 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import LandingPage from "./components/body";
 import PrediccionVentas from "./components/PrediccionVentas";
-import EstudioMercado from "./components/EstudioMercado"; 
+import EstudioMercado from "./components/EstudioMercado";
+import Planes from "./components/Planes";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
 
@@ -20,6 +23,7 @@ function App() {
             {/* Ruta nueva: Muestra solo la página de IA */}
             <Route path="/prediccion-ventas" element={<PrediccionVentas />} />
             <Route path="/estudio-mercado" element={<EstudioMercado />} />
+            <Route path="/planes" element={<Planes />} />
           </Routes>
         </main>
 
