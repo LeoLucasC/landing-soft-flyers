@@ -80,6 +80,7 @@ const Planes: React.FC = () => {
 
           {/* PLAN 1: NUEVO RUS */}
           <div className="group relative rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm hover:shadow-2xl hover:shadow-slate-200/60 transition-all duration-500 flex flex-col">
+          
             <div className="mb-6">
               <span className="inline-block bg-slate-100 text-slate-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider mb-3">
                 Para Emprendedores
@@ -298,8 +299,15 @@ const Planes: React.FC = () => {
         {/* ─── CARDS DE PLANES DE DESARROLLO WEB ─── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-4xl mx-auto items-stretch">
 
+          
           {/* PLAN START */}
           <div className="group relative rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm hover:shadow-2xl hover:shadow-slate-200/60 transition-all duration-500 flex flex-col">
+            
+            {/* Globotipo Glassmorphism de Urgencia */}
+            {/* Globotipo Glassmorphism de Urgencia en Rojo */}
+          <div className="absolute -top-5 -right-2 md:-right-4 z-20 backdrop-blur-md bg-white/80 border border-red-200 shadow-[0_8px_30px_rgba(220,38,38,0.12)] text-red-600 font-black text-xs md:text-sm px-4 py-2 rounded-2xl rotate-3 group-hover:rotate-6 transition-transform tracking-wider">
+            ⏳ ¡POR TIEMPO LIMITADO!
+          </div>           
             <div className="flex items-center gap-3 mb-6">
               <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center shadow-md shadow-cyan-300/30">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -346,7 +354,12 @@ const Planes: React.FC = () => {
 
           {/* PLAN BUSINESS - RECOMENDADO WEB */}
           <div className="group relative rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm hover:shadow-2xl hover:shadow-slate-200/60 transition-all duration-500 flex flex-col">
-            <div className="flex items-center gap-3 mb-6">
+            
+            {/* Globotipo Glassmorphism de Urgencia */}
+            <div className="absolute -top-5 -right-2 md:-right-4 z-20 backdrop-blur-md bg-white/80 border border-red-200 shadow-[0_8px_30px_rgba(220,38,38,0.12)] text-red-600 font-black text-xs md:text-sm px-4 py-2 rounded-2xl rotate-3 group-hover:rotate-6 transition-transform tracking-wider">
+              ⏳ ¡POR TIEMPO LIMITADO!
+            </div>
+              <div className="flex items-center gap-3 mb-6">
               <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shadow-md shadow-cyan-400/30">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -359,7 +372,7 @@ const Planes: React.FC = () => {
             <div className="mb-2 flex items-end gap-2">
               <span className="text-5xl font-black text-slate-800">S/650</span>
               <div className="flex flex-col pb-1">
-                <span className="text-slate-400 text-sm line-through decoration-red-400/60 decoration-2 font-bold leading-none mb-1">Antes S/900</span>
+                <span className="text-slate-400 text-sm line-through decoration-red-400/60 decoration-2 font-bold leading-none mb-1">Antes S/800</span>
                 <span className="text-slate-500 text-[10px] font-black uppercase tracking-wider leading-none">pago único</span>
               </div>
             </div>
