@@ -6,6 +6,11 @@ import PrediccionVentas from "./components/PrediccionVentas";
 import EstudioMercado from "./components/EstudioMercado";
 import Planes from "./components/Planes";
 import ScrollToTop from "./components/ScrollToTop";
+import DesarrolloCustom from "./components/desarrollo-custom"; 
+import AppsMoviles from "./components/apps-moviles"; 
+import ArquitecturaEscalable from "./components/arquitectura-escalable"; 
+import AutomatizacionEmpresarial from "./components/automatizacion-empresarial"; 
+import Facturacion from "./components/facturacion"; 
 
 function App() {
   return (
@@ -14,16 +19,17 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <Header />
 
-        {/* MARGEN SUPERIOR CRÍTICO */}
         <main className="flex-grow">
           <Routes>
-            {/* Ruta principal: Muestra el body.tsx */}
             <Route path="/" element={<LandingPage />} />
-            
-            {/* Ruta nueva: Muestra solo la página de IA */}
             <Route path="/prediccion-ventas" element={<PrediccionVentas />} />
             <Route path="/estudio-mercado" element={<EstudioMercado />} />
             <Route path="/planes" element={<Planes />} />
+            <Route path="/desarrollo-custom" element={<DesarrolloCustom />} /> 
+            <Route path="/apps-moviles" element={<AppsMoviles />} /> 
+            <Route path="/arquitectura-escalable" element={<ArquitecturaEscalable />} /> 
+            <Route path="/automatizacion-empresarial" element={<AutomatizacionEmpresarial />} /> 
+            <Route path="/facturacion" element={<Facturacion />} /> 
           </Routes>
         </main>
 

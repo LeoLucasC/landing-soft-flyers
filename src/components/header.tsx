@@ -126,7 +126,7 @@ const Header: React.FC = () => {
               {/* Mega Menu Modal Oscuro */}
               <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-[850px] bg-[#0A0F1E] border border-slate-800 rounded-3xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-10 grid grid-cols-2 gap-x-12 gap-y-10">
                 {/* Item 1 */}
-                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => scrollTo('soluciones')}>
+                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => { setIsMenuOpen(false); navigate('/desarrollo-custom'); }}>
                   <div className="w-8 flex items-center justify-center text-white mt-1 group-hover/item:text-cyan-400 transition-colors">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
                   </div>
@@ -137,7 +137,7 @@ const Header: React.FC = () => {
                 </div>
 
                 {/* Item 2 */}
-                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => scrollTo('soluciones')}>
+                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => { setIsMenuOpen(false); navigate('/arquitectura-escalable'); }}>
                   <div className="w-8 flex items-center justify-center text-white mt-1 group-hover/item:text-cyan-400 transition-colors">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
                   </div>
@@ -148,7 +148,7 @@ const Header: React.FC = () => {
                 </div>
 
                 {/* Item 3 */}
-                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => scrollTo('soluciones')}>
+                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => { setIsMenuOpen(false); navigate('/apps-moviles'); }}>
                   <div className="w-8 flex items-center justify-center text-white mt-1 group-hover/item:text-cyan-400 transition-colors">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
                   </div>
@@ -159,7 +159,7 @@ const Header: React.FC = () => {
                 </div>
 
                 {/* Item 4 */}
-                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => scrollTo('soluciones')}>
+                <div className="flex gap-4 items-start group/item cursor-pointer" onClick={() => { setIsMenuOpen(false); navigate('/automatizacion-empresarial'); }}>
                   <div className="w-8 flex items-center justify-center text-white mt-1 group-hover/item:text-cyan-400 transition-colors">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
@@ -173,8 +173,7 @@ const Header: React.FC = () => {
 
             {/* FACTURACION CON BADGE NOVEDAD*/}
             <a
-              href="#soluciones-rubros"
-              onClick={(e) => { e.preventDefault(); scrollTo('soluciones-rubros'); }}
+              href="/facturacion"
               className="relative group cursor-pointer block"
             >
               <span className="absolute -top-[2px] -right-2 bg-blue-600 text-[9px] text-white px-2 py-0.5 rounded-full font-black animate-pulse z-10">
