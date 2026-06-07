@@ -19,13 +19,13 @@ const DesarrolloCustom: React.FC = () => {
 
   // Imágenes para cada tarjeta (más llamativas)
   const cardImages = [
-    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1676299081847-824916de030a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://media.licdn.com/dms/image/v2/D4D12AQFZROZGmMMF_Q/article-cover_image-shrink_720_1280/B4DZgKWBLFGkAI-/0/1752520203127?e=2147483647&v=beta&t=QF_Hp6FvzwMeZfvzt6JfHsqfGkDxM9vdV7G04hxImEE',
+    'https://www.channelpartner.es/wp-content/uploads/2024/11/agentes-inteligentes-de-IA-buena.jpg',
+    'https://revistaempresarial.com/wp-content/uploads/2023/03/DispIoT_Empresas.jpg',
     'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://whitestack.com/wp-content/uploads/2025/11/ha-architecture-diagram-1024x576.jpg',
     'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://latam.requordit.com/wp-content/webp-express/webp-images/uploads/2025/01/gestion-documental-con-ia.jpg.webp',
     'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   ];
 
@@ -213,7 +213,7 @@ const DesarrolloCustom: React.FC = () => {
                   </div>
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
-                  <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Optimización documentos" className="w-full h-48 object-cover" />
+                  <img src="https://www.channelpartner.es/wp-content/uploads/2023/07/GESTION-DOCUMENTAL-1.jpg" alt="Optimización documentos" className="w-full h-48 object-cover" />
                   <div className="p-4 bg-white">
                     <p className="font-bold text-slate-800">Gestión documental inteligente</p>
                     <p className="text-sm text-slate-500">OCR, extracción de datos y automatización de procesos documentales.</p>

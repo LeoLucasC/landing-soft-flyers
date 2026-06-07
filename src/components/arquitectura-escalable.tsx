@@ -67,14 +67,14 @@ const ArquitecturaEscalable: React.FC = () => {
   ];
 
   const cardImages = [
-    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://www.customprofessionalhosting.com/numaqum/2025/03/balanceador-de-carga-848x440.png',
+    'https://ausum.cloud/wp-content/uploads/2022/05/autoscaling_2-1.jpg',
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://conejoblancoad.com/wp-content/uploads/2024/08/como-elegir-hosting.jpg.webp',
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    'https://www.sccenlared.es/wp-content/uploads/2019/07/almacenamiento-objetos.jpg',
+    'https://img.impactotic.co/wp-content/uploads/2024/10/23101532/Microservicios-escalabilidad-y-flexibilidad-en-la-era-digital.jpg'
   ];
 
   const getCardScrollStep = (): number => {
@@ -236,21 +236,21 @@ const ArquitecturaEscalable: React.FC = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
-                  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cloud servers" className="w-full h-52 object-cover group-hover:scale-105 transition duration-500" />
+                  <img src="https://www.digitalbizmagazine.com/wp-content/uploads/2023/06/db54_multicloud-sector-financiero_GFT.jpg" alt="Cloud servers" className="w-full h-52 object-cover group-hover:scale-105 transition duration-500" />
                   <div className="p-4 bg-white">
                     <p className="font-bold text-slate-800 flex items-center gap-2"><Cloud className="w-4 h-4 text-emerald-600" /> Multi-cloud & Hybrid</p>
                     <p className="text-sm text-slate-500">Despliegues en cualquier proveedor con infraestructura como código.</p>
                   </div>
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
-                  <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kubernetes" className="w-full h-52 object-cover group-hover:scale-105 transition duration-500" />
+                  <img src="https://zesty.co/wp-content/uploads/2024/10/Container-K8s.png" alt="Kubernetes" className="w-full h-52 object-cover group-hover:scale-105 transition duration-500" />
                   <div className="p-4 bg-white">
                     <p className="font-bold text-slate-800 flex items-center gap-2"><Cpu className="w-4 h-4 text-emerald-600" /> Kubernetes & Containers</p>
                     <p className="text-sm text-slate-500">Orquestación de microservicios con autoescalado y resiliencia.</p>
                   </div>
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
-                  <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Big Data" className="w-full h-52 object-cover group-hover:scale-105 transition duration-500" />
+                  <img src="https://analyzing-testing.netzsch.com/_Resources/Persistent/9/8/d/5/98d50640aa194614636c67cb218c737d5ce387e8/NETZSCH_Data-Science_Big-Data-scaled-1847x1038-1118x628.jpeg" alt="Big Data" className="w-full h-52 object-cover group-hover:scale-105 transition duration-500" />
                   <div className="p-4 bg-white">
                     <p className="font-bold text-slate-800 flex items-center gap-2"><Database className="w-4 h-4 text-emerald-600" /> Data Lakes & Analytics</p>
                     <p className="text-sm text-slate-500">Procesamiento de petabytes con Spark, BigQuery, Redshift.</p>
