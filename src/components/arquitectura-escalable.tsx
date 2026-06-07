@@ -13,7 +13,6 @@ import {
   TrendingUp, 
   ChevronLeft, 
   ChevronRight,
-  Sparkles,
   HardDrive,
   Network,
   Lock

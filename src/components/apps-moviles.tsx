@@ -11,11 +11,10 @@ import {
   Fingerprint, 
   QrCode, 
   Bell, 
-  Sparkles, 
   ChevronLeft, 
   ChevronRight,
   Zap,
-  Database,
+
   Shield,
   RefreshCw
 } from 'lucide-react';
