@@ -92,7 +92,7 @@ const AutomatizacionEmpresarial: React.FC = () => {
   // Proyectos con información detallada (para el modal) - ahora en grid
   const proyectos = [
     {
-      imagen: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8MJlmrPmXvtO2QwqpU3iLvYZGQKeBrhldvQ&s',
       titulo: 'Automatización de facturación para empresa de logística',
       descripcion: 'Reducción del 95% en tiempo de emisión de facturas e integración con ERP SAP.',
       detalles: {
