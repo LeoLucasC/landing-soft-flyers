@@ -14,7 +14,6 @@ import {
   Award,
   Clock,
   Headphones,
-  
 } from 'lucide-react';
 
 const SistemasRucSunat: React.FC = () => {
