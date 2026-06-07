@@ -46,7 +46,7 @@ const SistemasRucSunat: React.FC = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            src="https://www.idl.org.pe/wp-content/uploads/2020/09/BWBGR67MDNDR7AUH7NG5QVLRWY.jpg" 
             alt="Oficina SUNAT" 
             className="w-full h-full object-cover"
           />
@@ -68,14 +68,7 @@ const SistemasRucSunat: React.FC = () => {
           <p className="text-xl md:text-2xl mt-6 max-w-3xl mx-auto text-gray-100 font-medium">
             Automatiza la emisión, envío y validación de comprobantes electrónicos. Cumple la normativa peruana sin esfuerzo.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center gap-2">
-              <FileCheck className="w-5 h-5" /> Solicitar demo gratis
-            </button>
-            <button className="bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-full transition-all flex items-center gap-2">
-              <Headphones className="w-5 h-5" /> Contactar asesor
-            </button>
-          </div>
+
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
             {stats.map((stat, idx) => (
@@ -152,7 +145,7 @@ const SistemasRucSunat: React.FC = () => {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="https://thelemabogados.pe/wp-content/uploads/2023/11/SIRE-post.jpg" 
                 alt="Certificación SUNAT" 
                 className="w-full h-full object-cover"
               />
@@ -160,32 +153,6 @@ const SistemasRucSunat: React.FC = () => {
                 <span className="bg-white/90 backdrop-blur text-blue-800 font-bold px-4 py-2 rounded-full">SUNAT Oficial Partner</span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonios */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-black text-slate-800">Lo que dicen nuestros clientes</h3>
-            <p className="text-slate-500 mt-2">Empresas que ya confían en nuestra integración SUNAT</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((t, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-                <div className="flex items-center gap-2 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-500 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  ))}
-                </div>
-                <p className="text-slate-600 italic">"{t.text}"</p>
-                <div className="mt-4">
-                  <p className="font-bold text-slate-800">{t.name}</p>
-                  <p className="text-sm text-slate-500">{t.role}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -202,15 +169,7 @@ const SistemasRucSunat: React.FC = () => {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center text-white px-6">
           <h2 className="text-4xl md:text-5xl font-black">Comienza a facturar con SUNAT sin complicaciones</h2>
-          <p className="text-xl mt-4 text-gray-100">Más de 500 empresas ya optimizaron su facturación electrónica con nosotros.</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center gap-2">
-              <Zap className="w-5 h-5" /> Probar ahora gratis
-            </button>
-            <button className="bg-transparent border-2 border-white hover:bg-white/20 text-white font-bold py-3 px-8 rounded-full transition-all flex items-center gap-2">
-              <Clock className="w-5 h-5" /> Agendar demo
-            </button>
-          </div>
+          <p className="text-xl mt-4 text-gray-100">Más de 20 empresas ya optimizaron su facturación electrónica con nosotros.</p>
         </div>
       </section>
     </div>

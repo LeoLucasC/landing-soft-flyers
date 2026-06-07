@@ -80,12 +80,12 @@ const AutomatizacionEmpresarial: React.FC = () => {
 
   const cardImages = [
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1676299081847-824916de030a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1551434678-e076c2236a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://www.sistemaimpulsa.com/blog/wp-content/uploads/2021/07/Asistente-virtual-en-CRM1-696x522.jpg',
+    'https://i.blogs.es/7e83a8/programar-tareas-en-windows-10/1366_2000.jpg',
     'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     'https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1596526131083-a5c3e6b2b8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://commerce.orisha.com//app/uploads/2025/09/Banner-chatbot-advantages-and-disadvantages.jpg',
+    'https://fortia.com.mx/wp-content/uploads/2026/01/que-es-un-sistema-legacy-caracteristicas-y-migracion-3-1024x683.jpg',
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   ];
 
